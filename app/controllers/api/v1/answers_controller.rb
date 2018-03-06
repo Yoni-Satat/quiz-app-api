@@ -3,7 +3,7 @@ module Api
     class AnswersController < ApplicationController
       def index
         answers = Answer.all
-        render json: answers
+        render json: {options: answers}, status: :ok
       end
     end
   end
